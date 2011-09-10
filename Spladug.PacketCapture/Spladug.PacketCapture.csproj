@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26B94AE6-2F72-4901-84BF-CB9C73923ECA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spladug.PacketCapture</RootNamespace>
+    <AssemblyName>Spladug.PacketCapture</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Spladug.PacketCapture.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressMarshaler.cs" />
+    <Compile Include="DumpFilePacketWriter.cs" />
+    <Compile Include="ArgumentGuards.cs" />
+    <Compile Include="LinkLayerType.cs" />
+    <Compile Include="LivePacketWriter.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="NativeStructures.cs" />
+    <Compile Include="PacketCaptureDevice.cs" />
+    <Compile Include="Packet.cs" />
+    <Compile Include="PacketReadEventArgs.cs" />
+    <Compile Include="PacketCaptureException.cs" />
+    <Compile Include="PacketSaveFile.cs" />
+    <Compile Include="PacketReader.cs" />
+    <Compile Include="PacketWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafeHandles.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
